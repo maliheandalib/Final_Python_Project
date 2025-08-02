@@ -1,7 +1,7 @@
 from model.tools.validation_book import *
 
 class Book:
-    def __init__(self, book_id, title, subject, author, pdf_path, upload_date):
+    def __init__(self, book_id, title, subject, author):
         self._book_id = book_id
         self._title = title
         self._subject = subject

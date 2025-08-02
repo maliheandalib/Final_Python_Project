@@ -2,7 +2,7 @@ from model.tools.validation_user import *
 
 
 class User:
-    def __init__(self,user_id, name, family, email, username, password, locked=False):
+    def __init__(self, user_id, name, family, email, username, password, locked=False):
         self._user_id = user_id
         self._name = name
         self._family = family
