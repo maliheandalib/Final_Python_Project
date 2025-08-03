@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9760e2-81fc-4e58-af34-bf06ed6f2748" name="Changes" comment="بررسی خطا">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ff26ddbd-2da0-4f46-b6c8-07037951f81c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ff26ddbd-2da0-4f46-b6c8-07037951f81c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/repository/admin_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/admin_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/repository/book_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/book_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/repository/database_createor.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/database_createor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/repository/electronic_library_db" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/electronic_library_db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/user_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/tools/validation_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/tools/validation_user.py" afterDir="false" />
-    </list>
+    <list default="true" id="af9760e2-81fc-4e58-af34-bf06ed6f2748" name="Changes" comment="اصلاحیه" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +105,7 @@
       <workItem from="1754117857267" duration="12423000" />
       <workItem from="1754136979229" duration="2246000" />
       <workItem from="1754139706646" duration="1909000" />
-      <workItem from="1754203604281" duration="16937000" />
+      <workItem from="1754203604281" duration="17287000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="اصلاحیه">
       <option name="closed" value="true" />
@@ -132,16 +121,23 @@
       <option name="presentableId" value="LOCAL‎−۰۰۰۰۲" />
       <updated>1754208494596</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎−۰۰۰۰۳" summary="اصلاحیه">
+      <option name="closed" value="true" />
+      <created>1754255736339</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۳" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۳" />
+      <updated>1754255736339</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="اصلاحیه" />
     <MESSAGE value="بررسی خطا" />
-    <option name="LAST_COMMIT_MESSAGE" value="بررسی خطا" />
+    <MESSAGE value="اصلاحیه" />
+    <option name="LAST_COMMIT_MESSAGE" value="اصلاحیه" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Final_Python_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1754253023799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
