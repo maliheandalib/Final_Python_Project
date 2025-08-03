@@ -5,11 +5,11 @@ def user_id_validator(user_id):
         raise ValueError("Invalid User Id")
 
 def name_validator(name):
-    if not (type(name) == str and re.match(r"^[a-zA-Zآ-ی\s]{3,30}$", name)):
+    if not (type(name) == str and re.match(r"^[a-zA-Z\s]{3,30}$", name)):
         raise ValueError("Invalid Name")
 
 def family_validator(family):
-    if not (type(family) == str and re.match(r"^[a-zA-Zآ-ی\s]{3,30}$", family)):
+    if not (type(family) == str and re.match(r"^[a-zA-Z\s]{3,30}$", family)):
         raise ValueError("Invalid Family")
 
 def email_validator(email):

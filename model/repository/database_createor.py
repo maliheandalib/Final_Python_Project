@@ -7,17 +7,17 @@ def create_database():
     cursor = connection.cursor()
     cursor.execute("""
                     CREATE TABLE IF NOT EXISTS ADMIN(
-                        admin_id    INTEGER PRIMERY KEY AUTOINCREMENT, 
-                        name        TEXT NOT NULL, 
-                        family      TEXT NOT NULL, 
-                        username    TEXT NOT NULL, 
-                        password    TEXT NOT NULL
+                        admin_id    integer primary key, 
+                        name        text not null, 
+                        family      text not null, 
+                        username    text not null unique, 
+                        password    text not null
                     )
                     """)
 
     cursor.execute("""
                     CREATE TABLE IF NOT EXISTS BOOK(
-                        book_id   integer primary key AUTOINCREMENT, 
+                        book_id   integer primary key, 
                         title     text not null, 
                         subject   text not null, 
                         author    text not null,
@@ -27,13 +27,13 @@ def create_database():
 
     cursor.execute("""
                     CREATE TABLE IF NOT EXISTS USER(
-                        user_id   integer primary key AUTOINCREMENT, 
+                        user_id   integer primary key, 
                         name      text not null, 
                         family    text not null, 
                         email     tsxt not null, 
                         username  text not null unique, 
                         password  text not null,  
-                        locked     tinyint default 0
+                        locked    tinyint default 0
                     )
                     """)
 

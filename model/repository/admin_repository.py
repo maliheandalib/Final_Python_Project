@@ -1,48 +1,46 @@
 import sqlite3
 
 class AdminRepository:
+    def connect(self):
+        self.connection = sqlite3.connect("./model/repository/electronic_library_db")
+        self.cursor = self.connection.cursor()
+
+    def disconnect(self, commit=False):
+        if commit:
+            self.connection.commit()
+        self.connection.close()
+        self.connection.close()
+
     def save(self,admin):
-        connection = sqlite3.connect("./model/repository/electronic_library_db")
-        cursor = connection.cursor()
-        cursor.execute(
+        self.connect()
+        self.cursor.execute(
             """INSERT INTO ADMIN 
                     ( admin_id, name, family, username, password) 
                 VALUES (?,?,?,?,?)""",
-            [admin.admin_id, admin.name, admin.family, admin.username, admin.password])
-        connection.commit()
-        cursor.close()
-        connection.close()
-
+            [admin.admin_id, admin.name, admin.family,admin.username, admin.password])
+        self.disconnect(commit=True)
     def edit(self,admin):
-        connection = sqlite3.connect("./model/repository/electronic_library_db")
-        cursor = connection.cursor()
-        cursor.execute("update admin set admin_id=?, name=?, family=?, username=?, password=?",
-                       [admin.admin_id, admin.name, admin.family, admin.username, admin.password])
-        connection.commit()
-        cursor.close()
-        connection.close()
+        self.connect()
+        self.cursor.execute("update ADMIN set admin_id=?, name = ?, family=?, username=?, password=? where admin_id = ?"
+                        [admin.admin_id, admin.name, admin.family, admin.username, admin.password])
+        self.disconnect(commit=True)
 
     def delete(self,admin_id):
-        connection = sqlite3.connect("./model/repository/electronic_library_db")
-        cursor = connection.cursor()
-        cursor.execute("delete from admin where admin_id=?", [admin_id])
-        connection.commit()
-        cursor.close()
-        connection.close()
+        self.connect()
+        self.cursor.execute("delete from ADMIN where admin_id=?", [admin_id])
+        self.disconnect(commit=True)
 
     def find_by_all(self,admin):
-        connection = sqlite3.connect("./model/repository/electronic_library_db")
-        cursor = connection.cursor()
-        cursor.execute("select * from ADMIN")
-        return self.cursor.fetchall()
-        cursor.close()
-        connection.close()
+        self.connect()
+        self.cursor.execute("select * from ADMIN")
+        admin_list = self.cursor.fetchall()
+        self.disconnect()
+        return admin_list
 
 
     def find_by_admin_id(self,admin_id):
-        connection = sqlite3.connect("./model/repository/electronic_library_db")
-        cursor = connection.cursor()
-        cursor.execute("select * from ADMIN where admin_id = ?",[admin_id])
-        return self.cursor.fetchone()
-        cursor.close()
-        connection.close()
+        self.connect()
+        self.cursor.execute("select * from ADMIN where admin_id = ?",[admin_id])
+        admin_list = self.cursor.fetchone()
+        self.disconnect()
+        return admin_list

@@ -32,7 +32,7 @@ class AdminController:
     def find_by_all(self, admin):
         try:
             admin_repo = AdminRepository()
-            return True, admin_repo.find_all()
+            return True, admin_repo.find_by_all(admin)
         except Exception as e:
             return False,f"error find all admin{e}"
 

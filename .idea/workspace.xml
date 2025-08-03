@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9760e2-81fc-4e58-af34-bf06ed6f2748" name="Changes" comment="اصلاحیه">
+    <list default="true" id="af9760e2-81fc-4e58-af34-bf06ed6f2748" name="Changes" comment="بررسی خطا">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ff26ddbd-2da0-4f46-b6c8-07037951f81c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ff26ddbd-2da0-4f46-b6c8-07037951f81c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/book_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/book_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/repository/admin_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/admin_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/repository/book_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/book_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/repository/database_createor.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/database_createor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/repository/electronic_library_db" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/electronic_library_db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/tools/validation_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/tools/validation_book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/admin_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/admin_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/book_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/book_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/user_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/user_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/repository/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/tools/validation_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/tools/validation_user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,41 +54,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.admin_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.book_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.database_createor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.user_test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Active/PycharmProjects/Final_Python_Project/view&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.admin_test.executor": "Run",
+    "Python.book_test.executor": "Run",
+    "Python.database_createor.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.user_test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Active/PycharmProjects/Final_Python_Project/model/repository",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Active\PycharmProjects\Final_Python_Project\model\repository" />
       <recent name="C:\Users\Active\PycharmProjects\Final_Python_Project\view" />
       <recent name="C:\Users\Active\PycharmProjects\Final_Python_Project\test" />
       <recent name="C:\Users\Active\PycharmProjects\Final_Python_Project\model\tools" />
-      <recent name="C:\Users\Active\PycharmProjects\Final_Python_Project\model\repository" />
       <recent name="C:\Users\Active\PycharmProjects\Final_Python_Project\model\entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Active\PycharmProjects\Final_Python_Project\model\repository" />
       <recent name="C:\Users\Active\PycharmProjects\Final_Python_Project" />
     </key>
   </component>
@@ -117,7 +116,7 @@
       <workItem from="1754117857267" duration="12423000" />
       <workItem from="1754136979229" duration="2246000" />
       <workItem from="1754139706646" duration="1909000" />
-      <workItem from="1754203604281" duration="4762000" />
+      <workItem from="1754203604281" duration="16937000" />
     </task>
     <task id="LOCAL‎−۰۰۰۰۱" summary="اصلاحیه">
       <option name="closed" value="true" />
@@ -126,7 +125,14 @@
       <option name="presentableId" value="LOCAL‎−۰۰۰۰۱" />
       <updated>1754141707839</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎−۰۰۰۰۲" summary="بررسی خطا">
+      <option name="closed" value="true" />
+      <created>1754208494596</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۲" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۲" />
+      <updated>1754208494596</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,13 +140,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="اصلاحیه" />
-    <option name="LAST_COMMIT_MESSAGE" value="اصلاحیه" />
+    <MESSAGE value="بررسی خطا" />
+    <option name="LAST_COMMIT_MESSAGE" value="بررسی خطا" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Final_Python_Project$book_test.coverage" NAME="book_test Coverage Results" MODIFIED="1754207851962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Final_Python_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1754208072983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Final_Python_Project$user_test.coverage" NAME="user_test Coverage Results" MODIFIED="1754207871051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Final_Python_Project$database_createor.coverage" NAME="database_createor Coverage Results" MODIFIED="1754207961629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/repository" />
-    <SUITE FILE_PATH="coverage/Final_Python_Project$admin_test.coverage" NAME="admin_test Coverage Results" MODIFIED="1754207908768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Final_Python_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1754253023799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Final_Python_Project$book_test.coverage" NAME="book_test Coverage Results" MODIFIED="1754254760927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Final_Python_Project$user_test.coverage" NAME="user_test Coverage Results" MODIFIED="1754254776952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Final_Python_Project$database_createor.coverage" NAME="database_createor Coverage Results" MODIFIED="1754252714206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/repository" />
+    <SUITE FILE_PATH="coverage/Final_Python_Project$admin_test.coverage" NAME="admin_test Coverage Results" MODIFIED="1754254799718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
 </project>

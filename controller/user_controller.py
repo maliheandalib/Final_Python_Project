@@ -31,7 +31,7 @@ class UserController:
     def find_by_all (self,user):
         try:
             user_repo = UserRepository()
-            return True, user_repo.find_all()
+            return True, user_repo.find_by_all(user)
         except Exception as e:
             return False,f"error find all user{e}"
 

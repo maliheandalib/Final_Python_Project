@@ -499,7 +499,7 @@
     <routine id="190" parent="1" name="fts5"/>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-08-03.07:59:36</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-08-03.21:10:16</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1590,26 +1590,141 @@
     <argument id="554" parent="190">
       <Position>1</Position>
     </argument>
-    <table id="555" parent="191" name="sqlite_master">
+    <table id="555" parent="191" name="ADMIN"/>
+    <table id="556" parent="191" name="BOOK"/>
+    <table id="557" parent="191" name="USER"/>
+    <table id="558" parent="191" name="sqlite_master">
       <System>1</System>
     </table>
-    <column id="556" parent="555" name="type">
+    <column id="559" parent="555" name="admin_id">
+      <Position>1</Position>
+      <StoredType>integer|0s</StoredType>
+    </column>
+    <column id="560" parent="555" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="561" parent="555" name="family">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="562" parent="555" name="username">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="563" parent="555" name="password">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <index id="564" parent="555" name="sqlite_autoindex_ADMIN_1">
+      <ColNames>username</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="565" parent="555">
+      <ColNames>admin_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="566" parent="555">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_ADMIN_1</UnderlyingIndexName>
+    </key>
+    <column id="567" parent="556" name="book_id">
+      <Position>1</Position>
+      <StoredType>integer|0s</StoredType>
+    </column>
+    <column id="568" parent="556" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="569" parent="556" name="subject">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="570" parent="556" name="author">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="571" parent="556" name="book_pdf">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <key id="572" parent="556">
+      <ColNames>book_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="573" parent="557" name="user_id">
+      <Position>1</Position>
+      <StoredType>integer|0s</StoredType>
+    </column>
+    <column id="574" parent="557" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="575" parent="557" name="family">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="576" parent="557" name="email">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>tsxt|0s</StoredType>
+    </column>
+    <column id="577" parent="557" name="username">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="578" parent="557" name="password">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="579" parent="557" name="locked">
+      <DefaultExpression>0</DefaultExpression>
+      <Position>7</Position>
+      <StoredType>tinyint|0s</StoredType>
+    </column>
+    <index id="580" parent="557" name="sqlite_autoindex_USER_1">
+      <ColNames>username</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="581" parent="557">
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="582" parent="557">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_USER_1</UnderlyingIndexName>
+    </key>
+    <column id="583" parent="558" name="type">
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="557" parent="555" name="name">
+    <column id="584" parent="558" name="name">
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="558" parent="555" name="tbl_name">
+    <column id="585" parent="558" name="tbl_name">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="559" parent="555" name="rootpage">
+    <column id="586" parent="558" name="rootpage">
       <Position>4</Position>
       <StoredType>INT|0s</StoredType>
     </column>
-    <column id="560" parent="555" name="sql">
+    <column id="587" parent="558" name="sql">
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
