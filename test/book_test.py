@@ -1,5 +1,5 @@
 from controller.book_controller import BookController
-from model.entity.book import *
+#from model.entity.book import *
 
 # book_id = 88
 # title = "fffhhh"
@@ -8,8 +8,9 @@ from model.entity.book import *
 # book_id_validator(book_id)
 # title_validator(title)
 # subject_validator(subject)
+# book_pdf_validator
 #
-# book1 = Book(book_id, title, subject, "kjhggf")
+# book1 = Book(book_id, title, subject, "kjhggf", "arabi.pdf")
 #
 # print(book1.subject)
 # book1.author = "bbbbbjjjj"
@@ -27,4 +28,4 @@ from model.entity.book import *
 #print(book_repo.find_all())
 
 book_controller = BookController()
-print(book_controller.save(101, "raz","jgfgddt", "hyyfggf"))
+print(book_controller.save(101, "raz","jgfgddt", "hyyfggf", "raz.pdf"))

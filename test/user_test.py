@@ -1,5 +1,5 @@
 from controller.user_controller import UserController
-from model.entity.user import *
+#from model.entity.user import *
 
 # name = "zahra"
 # family = "farzane"

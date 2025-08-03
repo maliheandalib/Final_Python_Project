@@ -9,14 +9,14 @@ class BookRepository:
             """INSERT INTO BOOK 
                 (book_id, title, subject, author) 
             VALUES (?,?,?,?)""",
-            [book.book_id, book.title, book.subject, book.author])
+            [book.book_id, book.title, book.subject, book.author, book.book_pdf])
         connection.commit()
         cursor.close()
         connection.close()
     def edit(self,book):
         connection = sqlite3.connect("./model/repository/electronic_library_db")
         cursor = connection.cursor()
-        cursor.execute("update book set book_id=?, title=?, subject=?, auther=?",
+        cursor.execute("update book set book_id=?, title=?, subject=?, author=?, book_pdf=?",
             [book.book_id, book.title, book.subject, book.author])
         connection.commit()
         cursor.close()
@@ -39,7 +39,7 @@ class BookRepository:
     def find_by_title(self,title):
         connection = sqlite3.connect("./model/repository/electronic_library_db")
         cursor = connection.cursor()
-        cursor.execute("select * from book where book_id = ?",[book_id])
+        cursor.execute("select * from book where title = ?",[title])
         return self.cursor.fetchone()
         cursor.close()
         connection.close()

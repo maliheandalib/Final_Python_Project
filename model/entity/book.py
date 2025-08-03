@@ -1,11 +1,12 @@
 from model.tools.validation_book import *
 
 class Book:
-    def __init__(self, book_id, title, subject, author):
+    def __init__(self, book_id, title, subject, author, book_pdf):
         self._book_id = book_id
         self._title = title
         self._subject = subject
         self._author = author
+        self._book_pdf = book_pdf
 
 
     def __repr__(self):
@@ -47,5 +48,13 @@ class Book:
         author_validator(value)
         self._author = value
 
+    @property
+    def book_pdf(self):
+        return self._book_pdf
+
+    @book_pdf.setter
+    def book_pdf(self, value):
+        book_pdf_validator(value)
+        self._book_pdf = value
 
 

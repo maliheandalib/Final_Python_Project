@@ -15,3 +15,7 @@ def subject_validator(subject):
 def author_validator(author):
     if not (type(author) == str and re.match(r"^[آ-یa-zA-Z\s]{3,30}$", author)):
         raise ValueError("Invalid Author")
+
+def book_pdf_validator(book_pdf):
+    if not (type(book_pdf) == str and re.match(r"^[آ-یa-zA-Z0-9_.]{3,50}.pdf$",book_pdf)):
+        raise ValueError("Invalid Book Pdf")

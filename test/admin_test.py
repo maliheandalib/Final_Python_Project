@@ -1,7 +1,6 @@
 from controller.admin_controller import AdminController
 from model.entity.admin import *
-from model.repository.admin_repository import AdminRepository
-from model.repository.user_repository import UserRepository
+
 
 name = "farimah"
 family = "attar"

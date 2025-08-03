@@ -5,9 +5,9 @@ from model.repository.book_repository import BookRepository
 class BookController:
 
 
-    def save(self,book_id, title, subject, author):
+    def save(self,book_id, title, subject, author, book_pdf):
         try:
-            book = Book(book_id, title, subject, author)
+            book = Book(book_id, title, subject, author, book_pdf)
             book_repo = BookRepository()
             book_repo.save(book)
             return True, f"Book saved{book}"
@@ -15,9 +15,9 @@ class BookController:
             return False, f"error saving book{e}"
 
 
-    def edit(self, book_id, title, subject, author):
+    def edit(self, book_id, title, subject, author, book_pdf):
         try:
-            book = Book(book_id, title, subject, author)
+            book = Book(book_id, title, subject, author, book_pdf)
             book_repo = BookRepository()
             book_repo.edit(book)
             return True, f"Admin edited{book}"
@@ -35,7 +35,7 @@ class BookController:
     def find_by_all(self, book):
         try:
             book_repo = BookRepository()
-            return True, book_repo.find_all()
+            return True, book_repo.find_by_all(book)
         except Exception as e:
             return False,f"error find all book{e}"
 
