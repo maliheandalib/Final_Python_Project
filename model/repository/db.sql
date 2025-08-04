@@ -18,7 +18,7 @@ where username='malihe' and password='12345678'
 
 --edit ADMIN
 update admin set name='?', family='?', username='?', password='?'
-where admin_id=?
+where admin_id = ?
 
 --delete ADMIN
 delete from admin where admin_id='1'

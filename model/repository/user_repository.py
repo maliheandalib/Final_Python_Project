@@ -23,8 +23,8 @@ class UserRepository:
         self.disconnect(commit=True)
     def edit(self,user):
         self.connect()
-        self.cursor.execute("update user set user_id=?, name=?, family=?, email=?, username=?, password=?, locked=? where user_id=?",
-            [user.user_id, user.name, user.family, user.email, user.username, user.password, user.locked])
+        self.cursor.execute("update user set name=?, family=?, email=?, username=?, password=?, locked=? where user_id=?",
+            [user.name, user.family, user.email, user.username, user.password, user.locked, user.user_id])
         self.disconnect(commit=True)
     def delete(self,user_id):
         self.connect()

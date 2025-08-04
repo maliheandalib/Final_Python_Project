@@ -28,14 +28,14 @@ class UserController:
         except Exception as e:
             return False, f"error removing user{e}"
 
-    def find_by_all (self,user):
+    def find_by_all(self,user):
         try:
             user_repo = UserRepository()
-            return True, user_repo.find_by_all(user)
+            return True, user_repo.find_by_all()
         except Exception as e:
             return False,f"error find all user{e}"
 
-    def find_by_user_id (self,user_id):
+    def find_by_user_id(self,user_id):
         try:
             user_repo = UserRepository()
             return True, user_repo.find_by_user_id(user_id)

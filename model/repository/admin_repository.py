@@ -21,8 +21,9 @@ class AdminRepository:
         self.disconnect(commit=True)
     def edit(self,admin):
         self.connect()
-        self.cursor.execute("update ADMIN set admin_id=?, name = ?, family=?, username=?, password=? where admin_id = ?"
-                        [admin.admin_id, admin.name, admin.family, admin.username, admin.password])
+        self.cursor.execute("update ADMIN set admin_id=?, name=?, family=?, username=?, password=? where admin_id=?",
+                            [admin.admin_id, admin.name,admin.family,admin.username, admin.password]
+                            )
         self.disconnect(commit=True)
 
     def delete(self,admin_id):
@@ -30,7 +31,7 @@ class AdminRepository:
         self.cursor.execute("delete from ADMIN where admin_id=?", [admin_id])
         self.disconnect(commit=True)
 
-    def find_by_all(self,admin):
+    def find_by_all(self):
         self.connect()
         self.cursor.execute("select * from ADMIN")
         admin_list = self.cursor.fetchall()
